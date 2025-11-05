@@ -1,6 +1,6 @@
 # PiBox Hotspot
 
-A configurable Wi-Fi hotspot for Raspberry Pi with a built-in admin panel.
+A configurable Wi-Fi hotspot for Raspberry Pi0
 
 ## Features
 
