@@ -29,6 +29,7 @@ wpa_passphrase={password}
 wpa_key_mgmt=WPA-PSK
 wpa_pairwise=TKIP
 rsn_pairwise=CCMP
+ap_isolate=1
 """
     with open(HOSTAPD_CONFIG_PATH, 'w') as f:
         f.write(config)

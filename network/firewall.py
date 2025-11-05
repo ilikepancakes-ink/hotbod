@@ -29,3 +29,5 @@ def setup_nat(upstream_iface: str, hotspot_iface: str) -> None:
     # Allow forwarding
     subprocess.run(['sudo', 'iptables', '-A', 'FORWARD', '-i', hotspot_iface, '-o', upstream_iface, '-j', 'ACCEPT'], check=True)
     subprocess.run(['sudo', 'iptables', '-A', 'FORWARD', '-i', upstream_iface, '-o', hotspot_iface, '-m', 'state', '--state', 'RELATED,ESTABLISHED', '-j', 'ACCEPT'], check=True)
+    # Client isolation: prevent hotspot clients from seeing each other
+    subprocess.run(['sudo', 'iptables', '-I', 'FORWARD', '-i', hotspot_iface, '-o', hotspot_iface, '-j', 'DROP'], check=True)

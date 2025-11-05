@@ -11,6 +11,7 @@ A configurable Wi-Fi hotspot for Raspberry Pi0
 - Manages Wi-Fi hotspot using hostapd
 - Built-in Flask web admin panel at http://pibox.lmao
 - Handles IP forwarding and NAT for internet sharing
+- Client isolation: hotspot devices cannot see each other
 
 ## Requirements
 
